@@ -14,16 +14,12 @@ class IMCApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Calculateur IMC',
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF0c1234),
+      theme: ThemeData.dark().copyWith(
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Color(0xFF0c1234),
+          secondary: Colors.purple,
         ),
-        accentColor: Colors.purple,
         scaffoldBackgroundColor: Color(0xFF0c1234),
-        primaryColor: Color(0xFF0c1234),
-        textTheme: const TextTheme(
-          bodyText2: TextStyle(color: Colors.white),
-        ),
       ),
       home: const InputPage(title: 'Calculateur IMC'),
     );
