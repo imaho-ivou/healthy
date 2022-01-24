@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:healthy/myCarte.dart';
+import 'package:healthy/myContainer.dart';
 
 // fully transparent white (invisible)
 // const PrimaryColor = const Color(0xFF0c1234);
@@ -48,52 +50,17 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadiusDirectional.circular(10.0),
-                        color: Color(0xFF1D1E33)),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadiusDirectional.circular(10.0),
-                        color: Color(0xFF1D1E33)),
-                  ),
-                ),
+                MyCarte(),
+                MyCarte(),
               ],
             ),
           ),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadiusDirectional.circular(10.0),
-                  color: Color(0xFF1D1E33)),
-            ),
-          ),
+          MyCarte(),
           Expanded(
             child: Row(
               children: [
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadiusDirectional.circular(10.0),
-                        color: Color(0xFF1D1E33)),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadiusDirectional.circular(10.0),
-                        color: Color(0xFF1D1E33)),
-                  ),
-                ),
+                MyCarte(),
+                MyCarte(),
               ],
             ),
           ),
