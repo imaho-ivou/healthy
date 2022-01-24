@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
 
+// fully transparent white (invisible)
+// const PrimaryColor = const Color(0xFF0c1234);
 void main() {
   runApp(const IMCApp());
 }
 
 class IMCApp extends StatelessWidget {
   const IMCApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Calculateur IMC',
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0c1234),
+        ),
+        accentColor: Colors.purple,
+        scaffoldBackgroundColor: Color(0xFF0c1234),
+        primaryColor: Color(0xFF0c1234),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(color: Colors.white),
+        ),
+      ),
       home: const InputPage(title: 'Calculateur IMC'),
     );
   }
