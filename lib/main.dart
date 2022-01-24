@@ -6,16 +6,12 @@ void main() {
 
 class IMCApp extends StatelessWidget {
   const IMCApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Calculateur IMC',
-      theme: ThemeData(
-        // This is the theme of your application.
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark(),
       home: const InputPage(title: 'Calculateur IMC'),
     );
   }
