@@ -42,13 +42,62 @@ class _InputPageState extends State<InputPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Text('Calcul en cours ...'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10.0),
+                        color: Color(0xFF1D1E33)),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10.0),
+                        color: Color(0xFF1D1E33)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadiusDirectional.circular(10.0),
+                  color: Color(0xFF1D1E33)),
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10.0),
+                        color: Color(0xFF1D1E33)),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10.0),
+                        color: Color(0xFF1D1E33)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
