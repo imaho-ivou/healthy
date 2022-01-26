@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:healthy/myCarte.dart';
-import 'package:healthy/myContainer.dart';
+import 'package:healthy/Carte/myCarte/myCarte.dart';
 
-// fully transparent white (invisible)
-// const PrimaryColor = const Color(0xFF0c1234);
 void main() {
   runApp(const IMCApp());
 }
@@ -43,6 +40,7 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -50,17 +48,17 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                MyCarte(),
-                MyCarte(),
+                MyCarte(couleurActive),
+                MyCarte(couleurActive),
               ],
             ),
           ),
-          MyCarte(),
+          MyCarte(couleurActive),
           Expanded(
             child: Row(
               children: [
-                MyCarte(),
-                MyCarte(),
+                MyCarte(couleurActive),
+                MyCarte(couleurActive),
               ],
             ),
           ),
