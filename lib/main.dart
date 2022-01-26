@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/Carte/myCarte/myCarte.dart';
 
+import 'Carte/myCarte/Component/selectGenre.dart';
+
 void main() {
   runApp(const IMCApp());
 }
@@ -51,35 +53,11 @@ class _InputPageState extends State<InputPage> {
               children: [
                 MyCarte(
                   couleurActive,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.mars,
-                        size: 160.0,
-                      ),
-                      Text(
-                        "Homme",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      )
-                    ],
-                  ),
+                  selectGenre('HOMME', FontAwesomeIcons.mars),
                 ),
                 MyCarte(
                   couleurActive,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.venus,
-                        size: 160.0,
-                      ),
-                      Text(
-                        "FEMME",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      )
-                    ],
-                  ),
+                  selectGenre('FEMME', FontAwesomeIcons.venus),
                 ),
               ],
             ),
