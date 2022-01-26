@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/Carte/myCarte/myCarte.dart';
 
 void main() {
@@ -48,17 +49,47 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                MyCarte(couleurActive),
-                MyCarte(couleurActive),
+                MyCarte(
+                  couleurActive,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.mars,
+                        size: 160.0,
+                      ),
+                      Text(
+                        "Homme",
+                        style: TextStyle(color: Colors.white, fontSize: 25),
+                      )
+                    ],
+                  ),
+                ),
+                MyCarte(
+                  couleurActive,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.venus,
+                        size: 160.0,
+                      ),
+                      Text(
+                        "FEMME",
+                        style: TextStyle(color: Colors.white, fontSize: 25),
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
-          MyCarte(couleurActive),
+          MyCarte(couleurActive, Container()),
           Expanded(
             child: Row(
               children: [
-                MyCarte(couleurActive),
-                MyCarte(couleurActive),
+                MyCarte(couleurActive, Container()),
+                MyCarte(couleurActive, Container()),
               ],
             ),
           ),
